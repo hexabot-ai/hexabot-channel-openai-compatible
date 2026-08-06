@@ -1,0 +1,77 @@
+{
+  "name": "hexabot-channel-openai-compatible",
+  "version": "3.4.1",
+  "description": "OpenAI Chat Completions/Responses-compatible channel extension for Hexabot v3.",
+  "author": "Hexastack",
+  "license": "FCL-1.0-ALv2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "./index.channel": {
+      "types": "./dist/index.channel.d.ts",
+      "require": "./dist/index.channel.js",
+      "import": "./dist/index.channel.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE.md",
+    "!src/**/*.spec.ts"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "build:publish": "npm run clean && npm run build && npm run check:dist",
+    "check:dist": "test -f dist/index.js && test -f dist/index.channel.js",
+    "clean": "rimraf dist coverage",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" \"jest.config.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" \"jest.config.ts\" --fix",
+    "prepublishOnly": "npm run build:publish",
+    "release:patch": "npm version patch && git push origin main --tags",
+    "release:minor": "npm version minor && git push origin main --tags",
+    "test": "jest --config jest.config.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"
+  },
+  "peerDependencies": {
+    "@hexabot-ai/api": "^3.4.0",
+    "@hexabot-ai/types": "^3.2.0",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/event-emitter": "^3.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/event-emitter": "^3.0.1",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-header": "^3.1.1",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^15.15.0",
+    "jest": "^30.2.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.8.3",
+    "zod": "^4.3.6"
+  },
+  "engines": {
+    "node": "^24.17.0"
+  },
+  "packageManager": "pnpm@11.8.0"
+}

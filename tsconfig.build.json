@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.typecheck.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "exclude": ["src/**/*.spec.ts", "src/__tests__/**"]
+}

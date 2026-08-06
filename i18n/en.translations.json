@@ -1,0 +1,23 @@
+{
+  "openai-compatible": {
+    "OpenAI-Compatible Channel": "OpenAI-Compatible Channel",
+    "API key credential": "API key credential",
+    "Credential containing the bearer token clients must send as \"Authorization: Bearer <token>\". Leave empty to disable authentication (not recommended outside local development).": "Credential containing the bearer token clients must send as \"Authorization: Bearer <token>\". Leave empty to disable authentication (not recommended outside local development).",
+    "Model name": "Model name",
+    "Model identifier reported back in responses. Set to \"*\" to accept any \"model\" value from incoming requests; otherwise requests for a different model are rejected with a 404, mirroring the OpenAI API.": "Model identifier reported back in responses. Set to \"*\" to accept any \"model\" value from incoming requests; otherwise requests for a different model are rejected with a 404, mirroring the OpenAI API.",
+    "API type": "API type",
+    "Which OpenAI API surface this source exposes: \"Responses\" (\".../responses\", request/response built around \"input\"/\"output\") or \"Chat Completions\" (\".../chat/completions\", request/response built around \"messages\"/\"choices\"). Requests sent to the other endpoint are rejected with a 404.": "Which OpenAI API surface this source exposes: \"Responses\" (\".../responses\", request/response built around \"input\"/\"output\") or \"Chat Completions\" (\".../chat/completions\", request/response built around \"messages\"/\"choices\"). Requests sent to the other endpoint are rejected with a 404.",
+    "Conversation identity source": "Conversation identity source",
+    "How to derive a stable subscriber identity across requests, since the OpenAI Chat Completions API is otherwise stateless: the request's \"user\" field, a custom header, or the caller IP.": "How to derive a stable subscriber identity across requests, since the OpenAI Chat Completions API is otherwise stateless: the request's \"user\" field, a custom header, or the caller IP.",
+    "Identity header name": "Identity header name",
+    "Header read when \"Conversation identity source\" is set to \"header\".": "Header read when \"Conversation identity source\" is set to \"header\".",
+    "System message handling": "System message handling",
+    "How to treat an OpenAI \"system\" role message: ignore it (Hexabot flows own the chatbot behavior) or prepend its text as context to the latest user message.": "How to treat an OpenAI \"system\" role message: ignore it (Hexabot flows own the chatbot behavior) or prepend its text as context to the latest user message.",
+    "Stream chunk size (characters)": "Stream chunk size (characters)",
+    "When a client requests streaming, the reply is split into chunks of this size to emulate token-by-token streaming over SSE.": "When a client requests streaming, the reply is split into chunks of this size to emulate token-by-token streaming over SSE.",
+    "Response timeout (ms)": "Response timeout (ms)",
+    "Maximum time to wait for the chatbot reply before returning a timeout error to the caller.": "Maximum time to wait for the chatbot reply before returning a timeout error to the caller.",
+    "Thread inactivity (hours)": "Thread inactivity (hours)",
+    "Automatically start a new thread when the last message is older than this threshold.": "Automatically start a new thread when the last message is older than this threshold."
+  }
+}

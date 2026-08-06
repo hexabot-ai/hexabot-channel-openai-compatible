@@ -1,0 +1,23 @@
+{
+  "openai-compatible": {
+    "OpenAI-Compatible Channel": "Canal compatible OpenAI",
+    "API key credential": "Identifiant de clé API",
+    "Credential containing the bearer token clients must send as \"Authorization: Bearer <token>\". Leave empty to disable authentication (not recommended outside local development).": "Identifiant contenant le jeton que les clients doivent envoyer sous la forme \"Authorization: Bearer <token>\". Laisser vide pour désactiver l'authentification (déconseillé en dehors du développement local).",
+    "Model name": "Nom du modèle",
+    "Model identifier reported back in responses. Set to \"*\" to accept any \"model\" value from incoming requests; otherwise requests for a different model are rejected with a 404, mirroring the OpenAI API.": "Identifiant de modèle renvoyé dans les réponses. Utiliser \"*\" pour accepter n'importe quelle valeur \"model\" dans les requêtes entrantes ; sinon, les requêtes pour un autre modèle sont rejetées avec une erreur 404, comme le fait l'API OpenAI.",
+    "API type": "Type d'API",
+    "Which OpenAI API surface this source exposes: \"Responses\" (\".../responses\", request/response built around \"input\"/\"output\") or \"Chat Completions\" (\".../chat/completions\", request/response built around \"messages\"/\"choices\"). Requests sent to the other endpoint are rejected with a 404.": "La surface de l'API OpenAI exposée par cette source : \"Responses\" (\".../responses\", requête/réponse construites autour de \"input\"/\"output\") ou \"Chat Completions\" (\".../chat/completions\", requête/réponse construites autour de \"messages\"/\"choices\"). Les requêtes envoyées vers l'autre point de terminaison sont rejetées avec une erreur 404.",
+    "Conversation identity source": "Source d'identité de conversation",
+    "How to derive a stable subscriber identity across requests, since the OpenAI Chat Completions API is otherwise stateless: the request's \"user\" field, a custom header, or the caller IP.": "Comment déterminer une identité d'abonné stable entre les requêtes, l'API OpenAI Chat Completions étant sans état : le champ \"user\" de la requête, un en-tête personnalisé, ou l'adresse IP de l'appelant.",
+    "Identity header name": "Nom de l'en-tête d'identité",
+    "Header read when \"Conversation identity source\" is set to \"header\".": "En-tête lu lorsque la \"Source d'identité de conversation\" est définie sur \"header\".",
+    "System message handling": "Gestion du message système",
+    "How to treat an OpenAI \"system\" role message: ignore it (Hexabot flows own the chatbot behavior) or prepend its text as context to the latest user message.": "Comment traiter un message de rôle \"system\" OpenAI : l'ignorer (les flux Hexabot gèrent le comportement du chatbot) ou ajouter son texte en contexte au dernier message utilisateur.",
+    "Stream chunk size (characters)": "Taille des blocs de diffusion (caractères)",
+    "When a client requests streaming, the reply is split into chunks of this size to emulate token-by-token streaming over SSE.": "Lorsqu'un client demande le streaming, la réponse est découpée en blocs de cette taille pour émuler une diffusion token par token via SSE.",
+    "Response timeout (ms)": "Délai de réponse (ms)",
+    "Maximum time to wait for the chatbot reply before returning a timeout error to the caller.": "Délai maximal d'attente de la réponse du chatbot avant de renvoyer une erreur de délai dépassé à l'appelant.",
+    "Thread inactivity (hours)": "Inactivité du fil (heures)",
+    "Automatically start a new thread when the last message is older than this threshold.": "Démarrer automatiquement un nouveau fil lorsque le dernier message est plus ancien que ce seuil."
+  }
+}
