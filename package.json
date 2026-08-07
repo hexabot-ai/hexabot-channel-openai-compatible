@@ -1,6 +1,6 @@
 {
   "name": "hexabot-channel-openai-compatible",
-  "version": "3.4.2",
+  "version": "3.4.3",
   "description": "OpenAI Chat Completions/Responses-compatible channel extension for Hexabot v3.",
   "author": "Hexastack",
   "license": "FCL-1.0-ALv2",
