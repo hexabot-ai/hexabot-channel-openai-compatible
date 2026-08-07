@@ -40,7 +40,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"
   },
   "peerDependencies": {
-    "@hexabot-ai/api": "^3.4.0",
+    "@hexabot-ai/api": "^3.4.2",
     "@hexabot-ai/types": "^3.2.0",
     "@nestjs/common": "^11.1.6",
     "@nestjs/core": "^11.1.6",
